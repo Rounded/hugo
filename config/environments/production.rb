@@ -62,9 +62,10 @@ Hugo::Application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+  
   config.action_mailer.default_url_options = { :host => 'hugohelps.herokuapp.com' }
-
   ActionMailer::Base.smtp_settings = {
     :user_name => "app9139408@heroku.com",
     :password => "pmbd3vbr",
@@ -73,7 +74,6 @@ Hugo::Application.configure do
     :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
-  }
 
 
 end
