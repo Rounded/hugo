@@ -4,14 +4,17 @@ class Venue
   field :neighborhood, type: Hash
   field :power_outage_percentage, type: Integer
 
-  def self.location_search
+  def self.location_search(query, zip)
     client = Foursquare2::Client.new(:client_id => 'SMPGEQCWEVNRIF3UQTYOQSTXCD5VPAPNWLYD2O04XPUIBVCE', :client_secret => 'SARCGLTZZFM4WBOSZSNLJPNFVMDFQPWAVWW1ZLETDST5HFBD')
-    response = client.explore_venues(near: "10016", :query => 'hotel', limit: "50")
+    response = client.explore_venues(near: "#{zip}", :query => "#{query}", limit: "50")
     response_items = response.groups.first.items
     venues = response_items.collect{|item| item.venue }
     Venue.collection.insert(venues)
   end
 
+  before_create :find_closest_neighborhood
+
+  protected
   def find_closest_neighborhood
     venue_location = [location["lat"], location["lng"]]
     report = Sandy::Provider::ConEd::Report.new
