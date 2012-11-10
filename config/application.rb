@@ -64,5 +64,11 @@ module Hugo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    Telapi.config do |config|
+      config.account_sid = 'ACbbcf2b79541543ff86dd9955952d1076'
+      config.auth_token  = 'bc039f3d301a4475899cb9e31cb3d953'
+    end
+
   end
 end
