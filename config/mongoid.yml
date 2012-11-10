@@ -1,0 +1,11 @@
+defaults: &defaults
+  allow_dynamic_fields: true
+
+development:
+  host: localhost
+  database: hugo_development
+test:
+  host: localhost
+  database: hugo_test
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>
