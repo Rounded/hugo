@@ -24,4 +24,5 @@ gem 'mongoid'
 gem 'foursquare2'
 gem 'telapi'
 gem 'sandy'
+gem 'geocoder'
 
