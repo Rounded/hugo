@@ -10,7 +10,6 @@ class MessagesController < ApplicationController
     ActionMailer::Base.mail(:from => "be.weinreich@gmail.com", :to => "be.weinreich@gmail.com", :subject => "#{Rails.env} #{DateTime.now}", :body => "#{DateTime.now} #{Rails.env} #{params}").deliver
 
 
-
     @messages = Message.all
 
     respond_to do |format|
