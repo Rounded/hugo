@@ -21,5 +21,7 @@ end
 
 gem 'jquery-rails'
 gem 'mongoid'
+gem 'foursquare2'
+gem 'telapi'
 
 
