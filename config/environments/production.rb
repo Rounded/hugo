@@ -68,7 +68,7 @@ Hugo::Application.configure do
   ActionMailer::Base.smtp_settings = {
     :user_name => "app9139408@heroku.com",
     :password => "pmbd3vbr",
-    :domain => "hugoheroku.herokuapp.com",
+    :domain => "hugohelps.herokuapp.com",
     :address => "smtp.sendgrid.net",
     :port => 587,
     :authentication => :plain,
