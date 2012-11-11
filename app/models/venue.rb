@@ -4,7 +4,8 @@ class Venue
   field :neighborhood, type: Hash
   field :power_outage_percentage, type: Integer
 
-  def self.location_search(query, zip)
+  def self.location_search(zip, from_number)
+    query = "hotel"
     # Connect to 4SQ
     client = Foursquare2::Client.new(:client_id => 'SMPGEQCWEVNRIF3UQTYOQSTXCD5VPAPNWLYD2O04XPUIBVCE', :client_secret => 'SARCGLTZZFM4WBOSZSNLJPNFVMDFQPWAVWW1ZLETDST5HFBD')
     # Search 4SQ Explore for stuff
@@ -54,8 +55,9 @@ class Venue
       config.account_sid = 'ACbbcf2b79541543ff86dd9955952d1076'
       config.auth_token  = 'bc039f3d301a4475899cb9e31cb3d953'
     end
+    # #{venue.contact['formattedPhone']}"
     alerted_places.each do |venue|
-     Telapi::Message.create( '(716) 341-5129', '(302) 752-4624', "#{venue.name}\n#{venue.location['address']}\n#{venue.location.city}, #{venue.location.state} #{venue.location['postalCode']}\n#{venue.contact['formattedPhone']}" )
+     Telapi::Message.create( "#{from_number}", '(302) 752-4624', "#{venue.name}\n#{venue.location['address']}\n#{venue.location.city}, #{venue.location.state} #{venue.location['postalCode']}\n(845) 797-9516" )
     end
   end
 
