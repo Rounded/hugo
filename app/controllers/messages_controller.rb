@@ -3,8 +3,8 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     
-    body = params['body']
-    from = params['from']
+    body = params['Body']
+    from = params['From']
 
     Venue.location_search(body, from)
 
