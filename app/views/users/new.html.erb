@@ -1,0 +1,33 @@
+
+
+
+<div class="container signup">
+  <div class="row">
+    <div class="span6 offset3">
+      <h1 class="brand-title">HUGO.</h1>
+      <p class="highlight">HUGO is here you when you need him- just text him.</p>
+      <%= form_for @user, html: {class: "goodtogo"} do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <fieldset>
+          <%= f.text_field :name, placeholder: "Your Name", class: "span6 goodtogo1" %>
+          <%= f.telephone_field :number, placeholder: "(###) ###-####", class: "span6 goodtogo2" %>
+          <div class="row">
+            <button class="btn btn-primary span6">Use HUGO.</button>
+          </div><!-- .row -->
+        </fieldset>
+      <% end %>
+    </div><!-- .span6 -->
+  </div><!-- .row -->
+</div><!-- .container --> 
+
+
