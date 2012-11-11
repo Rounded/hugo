@@ -3,6 +3,10 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
 
+
+    puts "PARAMS ARE: "
+    puts YAML.dump params
+
     ActionMailer::Base.mail(:from => "be.weinreich@gmail.com", :to => "be.weinreich@gmail.com", :subject => "#{Rails.env} #{DateTime.now}", :body => "#{DateTime.now} #{Rails.env} #{params}").deliver
 
     @messages = Message.all

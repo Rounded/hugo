@@ -1,6 +1,5 @@
 Hugo::Application.routes.draw do
   resources :messages
-
   root :to => 'messages#index'
 
   # get "pages/index"
@@ -55,9 +54,12 @@ Hugo::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 <<<<<<< HEAD
+<<<<<<< HEAD
   root :to => 'pages#index'
 =======
 >>>>>>> 4c12721967123b4b3937cd3b47b8d507d8343857
+=======
+>>>>>>> d0146ef6acb0a7cd7ecd1579eba11e7e6082e07a
 
   # See how all your routes lay out with "rake routes"
 
