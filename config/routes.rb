@@ -1,5 +1,9 @@
 Hugo::Application.routes.draw do
-  get "pages/index"
+  resources :messages
+
+  root :to => 'messages#index'
+
+  # get "pages/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +54,10 @@ Hugo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
   root :to => 'pages#index'
+=======
+>>>>>>> 4c12721967123b4b3937cd3b47b8d507d8343857
 
   # See how all your routes lay out with "rake routes"
 

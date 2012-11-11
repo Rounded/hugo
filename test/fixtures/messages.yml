@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sid: MyString
+  account_sid: MyString
+  from: 1
+  status: MyString
+  direction: MyString
+
+two:
+  sid: MyString
+  account_sid: MyString
+  from: 1
+  status: MyString
+  direction: MyString

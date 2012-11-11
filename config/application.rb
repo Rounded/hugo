@@ -64,5 +64,20 @@ module Hugo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    Telapi.config do |config|
+      config.account_sid = 'ACbbcf2b79541543ff86dd9955952d1076'
+      config.auth_token  = 'bc039f3d301a4475899cb9e31cb3d953'
+    end
+
+    ActionMailer::Base.smtp_settings = {
+      :user_name => "app9139408@heroku.com",
+      :password => "pmbd3vbr",
+      :domain => "hugohelps.herokuapp.com",
+      :address => "smtp.sendgrid.net",
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
   end
 end
