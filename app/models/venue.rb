@@ -59,7 +59,4 @@ class Venue
     end
   end
 
-
-
-
 end
