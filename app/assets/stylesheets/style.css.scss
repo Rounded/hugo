@@ -62,7 +62,7 @@ input[type="color"],
 }
 
 body {
-  background: url(bg_body_nyc.png) left no-repeat;
+  background: url(bg_body_nyc.png) top left no-repeat;
 }
 
 .signup {
@@ -80,5 +80,15 @@ body {
   .brand-title {
     font-size: 110px;
     line-height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 85px;
+    line-height: 110px;
+  }
+  .signup {
+    margin-top: 10px;
   }
 }
