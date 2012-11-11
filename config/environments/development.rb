@@ -27,19 +27,19 @@ Hugo::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
- 
+  
+
+  config.action_mailer.default_url_options = { :host => 'hugohelps.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
-    :user_name => "be.weinreich@gmail.com",
-    :password => "Yoffi18!",
-    :address => "smtp.gmail.com",
+    :user_name => "app9139408@heroku.com",
+    :password => "pmbd3vbr",
+    :domain => "hugohelps.herokuapp.com",
+    :address => "smtp.sendgrid.net",
     :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
   }
-
 end

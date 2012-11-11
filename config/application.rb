@@ -70,5 +70,14 @@ module Hugo
       config.auth_token  = 'bc039f3d301a4475899cb9e31cb3d953'
     end
 
+    ActionMailer::Base.smtp_settings = {
+      :user_name => "app9139408@heroku.com",
+      :password => "pmbd3vbr",
+      :domain => "hugohelps.herokuapp.com",
+      :address => "smtp.sendgrid.net",
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
   end
 end
