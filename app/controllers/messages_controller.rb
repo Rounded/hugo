@@ -2,11 +2,11 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
+    
+    body = params['body']
+    from = params['from']
 
-    puts "PARAMS ARE: "
-    puts YAML.dump params
-
-    ActionMailer::Base.mail(:from => "be.weinreich@gmail.com", :to => "be.weinreich@gmail.com", :subject => "#{Rails.env} #{DateTime.now}", :body => "#{DateTime.now} #{Rails.env} #{params}").deliver
+    Venue.location_search(body, from)
 
     respond_to do |format|
       format.html # index.html.erb
