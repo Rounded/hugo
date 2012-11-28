@@ -1,0 +1,93 @@
+::-webkit-input-placeholder {
+   color: #cccccc;
+}
+:-moz-placeholder {  
+   color: #cccccc;  
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: 50px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 25px;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 18px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 20px;
+  font-weight: bold;;
+  line-height: 20px;
+  *line-height: 20px;
+}
+
+.brand-title {
+  font-size: 139px;
+  line-height: 150px;
+  color: #ff394c;
+}
+
+.highlight {
+  margin-bottom: 40px;
+  color: #ff394c;
+}
+
+body {
+  background: url(bg_body_nyc.png) top left no-repeat;
+}
+
+.signup {
+  margin-top: 50px;
+}
+
+@media (min-width: 1200px) {
+  .brand-title {
+    font-size: 176px;
+    line-height: 180px;
+  }
+}
+
+@media (max-width: 979px) {
+  .brand-title {
+    font-size: 110px;
+    line-height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 85px;
+    line-height: 110px;
+  }
+  .signup {
+    margin-top: 10px;
+  }
+}
